@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Neon-themed responsive website for a service provider — web dev, design, SEO and more." />
+  <title>Samule Marketing — Digital Services</title>
+
+  <!-- Link to external CSS (create style.css next) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon ideas: a neon SVG or .ico file placed at /favicon.ico -->
+  <link rel="icon" href="favicon.ico">
+</head>
+<body class="neon-bg">
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="#">Smaule Marketing<span class="dot">.</span></a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Portfolio</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="cta">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero container">
+    <div class="hero-left">
+      <h1 class="neon-heading">We build sleek digital experiences<br><span>—</span> fast.</h1>
+      <p class="lead">Neon-themed web design, development, and growth services for ambitious brands. Fast delivery, modern UI, and measurable results.</p>
+
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-neon">Start a Project</a>
+        <a href="#services" class="btn btn-outline">Our Services</a>
+      </div>
+
+      <ul class="trusted">
+        <li>Trusted by startups & agencies</li>
+        <li>Response within 24 hours</li>
+      </ul>
+    </div>
+
+    <div class="hero-right">
+      <div class="card-floating">
+        <form id="lead-form" class="lead-form" novalidate>
+          <h3>Free consultation</h3>
+          <label class="sr-only" for="name">Full name</label>
+          <input id="name" name="name" type="text" placeholder="Full name*" required>
+
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Email*" required>
+
+          <label class="sr-only" for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Project details*" required></textarea>
+
+          <div class="form-row">
+            <button type="submit" class="btn btn-neon small">Send</button>
+            <div id="form-status" role="status" aria-live="polite"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section container">
+    <h2 class="section-title">Services</h2>
+    <p class="section-sub">Design, development and growth packages — crafted with neon precision.</p>
+
+    <div class="grid services-grid">
+      <article class="card neon-card">
+        <div class="icon">💻</div>
+        <h3>Web Development</h3>
+        <p>Fast, accessible, and SEO-friendly websites — React, Next.js, or static JAMstack builds.</p>
+        <a class="link" href="#contact">Get started →</a>
+      </article>
+
+      <article class="card neon-card">
+        <div class="icon">🎨</div>
+        <h3>Brand & UI Design</h3>
+        <p>Eye-catching neon-first visual identities, UI kits and marketing assets.</p>
+        <a class="link" href="#contact">View work →</a>
+      </article>
+
+      <article class="card neon-card">
+        <div class="icon">📈</div>
+        <h3>SEO & Growth</h3>
+        <p>Content strategy, technical SEO and conversion optimization to scale traffic.</p>
+        <a class="link" href="#contact">Learn more →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Portfolio / Work -->
+  <section id="work" class="section container">
+    <h2 class="section-title">Recent Work</h2>
+    <div class="grid work-grid">
+      <div class="work-item">
+        <div class="work-thumb" aria-hidden="true"></div>
+        <h4>Fintech Dashboard</h4>
+        <p>Interactive charts, real-time updates, and custom components.</p>
+      </div>
+      <div class="work-item">
+        <div class="work-thumb" aria-hidden="true"></div>
+        <h4>E‑commerce Rebrand</h4>
+        <p>Product-led design and optimized checkout flows.</p>
+      </div>
+      <div class="work-item">
+        <div class="work-thumb" aria-hidden="true"></div>
+        <h4>Marketing Microsite</h4>
+        <p>High-converting landing pages with A/B testing baked-in.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="section container">
+    <h2 class="section-title">Pricing</h2>
+    <p class="section-sub">Transparent packages — or request a custom quote.</p>
+
+    <div class="grid pricing-grid">
+      <div class="pricing-card neon-card">
+        <h3>Starter</h3>
+        <div class="price">$699</div>
+        <ul>
+          <li>Up to 5 pages</li>
+          <li>Responsive design</li>
+          <li>Basic SEO</li>
+        </ul>
+        <a href="#contact" class="link">Choose Starter</a>
+      </div>
+
+      <div class="pricing-card neon-card featured">
+        <h3>Business</h3>
+        <div class="price">$1,899</div>
+        <ul>
+          <li>Up to 20 pages</li>
+          <li>CMS & Analytics</li>
+          <li>Performance optimization</li>
+        </ul>
+        <a href="#contact" class="link">Choose Business</a>
+      </div>
+
+      <div class="pricing-card neon-card">
+        <h3>Enterprise</h3>
+        <div class="price">Custom</div>
+        <ul>
+          <li>Custom systems & integrations</li>
+          <li>Dedicated support</li>
+          <li>SLA & reporting</li>
+        </ul>
+        <a href="#contact" class="link">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & FAQ -->
+  <section id="about" class="section container about-grid">
+    <div class="about-card neon-card">
+      <h2>About NeonPro</h2>
+      <p>We combine bold neon aesthetics with pragmatic engineering. Remote-friendly, results-oriented, and obsessed with polish.</p>
+      <ul>
+        <li>• 10+ years combined experience</li>
+        <li>• Fast turnarounds</li>
+        <li>• Design-led approach</li>
+      </ul>
+    </div>
+
+    <div class="faq-card neon-card">
+      <h2>FAQ</h2>
+      <details>
+        <summary>How long does a typical project take?</summary>
+        <p>Most small sites: 1–3 weeks. Larger projects vary by scope.</p>
+      </details>
+      <details>
+        <summary>Do you offer maintenance?</summary>
+        <p>Yes — monthly maintenance & hosting plans are available.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Let's build something neon.</h3>
+        <p>Tell us about your project and we'll reply within 24 hours.</p>
+      </div>
+
+      <form id="contact-form" class="contact-form" novalidate>
+        <input id="c-name" name="name" type="text" placeholder="Your name*" required>
+        <input id="c-email" name="email" type="email" placeholder="Your email*" required>
+        <textarea id="c-project" name="project" rows="4" placeholder="Project summary*" required></textarea>
+        <div class="form-row">
+          <button type="submit" class="btn btn-neon">Request Quote</button>
+          <div id="contact-status" role="status" aria-live="polite"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> NeonPro — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Link to external JS (create script.js next) -->
+  <script src="script.js" defer></script>
+</body>
+</html>

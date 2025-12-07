@@ -1,0 +1,313 @@
+/* ==========================
+   NEON THEME GLOBAL STYLES
+   ========================== */
+   :root {
+    --bg: #05050a;
+    --panel: #0d0d17;
+    --neon: #19f3ff;
+    --neon-pink: #ff2bf1;
+    --text: #e2e8f0;
+    --subtext: #9aa0b3;
+    --radius: 14px;
+    --shadow-neon: 0 0 12px var(--neon), 0 0 28px var(--neon);
+    --shadow-pink: 0 0 12px var(--neon-pink), 0 0 28px var(--neon-pink);
+  }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* ==========================
+     CONTAINERS / LAYOUT
+     ========================== */
+  .container {
+    width: 92%;
+    margin: auto;
+    max-width: 1300px;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  /* ==========================
+     NAVIGATION
+     ========================== */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(5, 5, 10, 0.7);
+    backdrop-filter: blur(12px);
+  }
+  
+  .nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+  }
+  
+  .brand {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--neon);
+    text-decoration: none;
+    text-shadow: var(--shadow-neon);
+  }
+  
+  .brand .dot {
+    color: var(--neon-pink);
+    text-shadow: var(--shadow-pink);
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .main-nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.2s;
+  }
+  
+  .main-nav a:hover {
+    color: var(--neon);
+    text-shadow: var(--shadow-neon);
+  }
+  
+  /* Mobile Nav */
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    width: 28px;
+    height: 3px;
+    background: var(--neon);
+    display: block;
+    transition: 0.3s;
+    border-radius: 2px;
+  }
+  
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: relative;
+  }
+  
+  .hamburger::before {
+    top: -7px;
+  }
+  .hamburger::after {
+    top: 4px;
+  }
+  
+  /* ==========================
+     HERO
+     ========================== */
+  .hero {
+    padding-top: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .neon-heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: var(--shadow-neon);
+  }
+  
+  .lead {
+    color: var(--subtext);
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    padding: 0.9rem 1.4rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  
+  .btn-neon {
+    background: var(--neon);
+    color: #000;
+    box-shadow: var(--shadow-neon);
+  }
+  
+  .btn-outline {
+    border: 2px solid var(--neon);
+    color: var(--neon);
+  }
+  
+  .btn-outline:hover {
+    background: var(--neon);
+    color: #000;
+    box-shadow: var(--shadow-neon);
+  }
+  
+  .card-floating {
+    background: var(--panel);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  }
+  
+  .card-floating input,
+  .card-floating textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--neon);
+    background: #000;
+    color: var(--text);
+  }
+  
+  /* ==========================
+     SERVICES / NEON CARDS
+     ========================== */
+  .neon-card {
+    background: var(--panel);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 0 20px rgba(25, 243, 255, 0.15);
+    transition: 0.3s;
+  }
+  
+  .neon-card:hover {
+    box-shadow: var(--shadow-neon);
+  }
+  
+  .icon {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* ==========================
+     WORK / PORTFOLIO
+     ========================== */
+  .work-thumb {
+    height: 180px;
+    background: linear-gradient(135deg, var(--neon), var(--neon-pink));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-neon);
+    margin-bottom: 1rem;
+  }
+  
+  /* ==========================
+     PRICING
+     ========================== */
+  .pricing-card {
+    text-align: center;
+  }
+  
+  .pricing-card.featured {
+    border: 2px solid var(--neon);
+    box-shadow: var(--shadow-neon);
+  }
+  
+  .price {
+    font-size: 2.2rem;
+    margin: 1rem 0;
+    color: var(--neon);
+    text-shadow: var(--shadow-neon);
+  }
+  
+  /* ==========================
+     ABOUT / FAQ
+     ========================== */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  /* ==========================
+     FOOTER
+     ========================== */
+  .site-footer {
+    margin-top: 5rem;
+    padding: 4rem 0 2rem;
+    background: #000;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--subtext);
+  }
+  
+  /* ==========================
+     RESPONSIVE BREAKPOINTS
+     ========================== */
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .nav-toggle {
+      display: block;
+    }
+  
+    .main-nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #000;
+      padding: 1rem 0;
+      display: none;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .main-nav.open {
+      display: flex;
+    }
+  
+    .main-nav ul {
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+  
+    .about-grid,
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
